@@ -1,0 +1,79 @@
+$browser-context: 18;
+@function em($pixels, $context: $browser-context) {
+	@return #{$pixels/$context}em;
+}
+@media screen and (min-width: 320px) {
+	html,
+	body {
+		margin: 0;
+		overflow-x: hidden;
+	}
+}
+
+@media screen and (max-width: 320px) {
+	html,
+	body {
+		margin: 0;
+		overflow-x: hidden;
+	}
+}
+
+@for $i from 1 through 60 {
+	@media(min-width: 2000px + ($i * 100)) {
+		body {
+			font-size: 18px + $i !important;
+		}
+	};
+}
+@for $i from 1 through 100 {
+	@media(max-width: 1280px - ($i * 10)) {
+		.tab_content{
+			h1{
+				font-size: 150px - $i !important;
+			} 
+		}
+	};
+}
+@for $i from 1 through 7 {
+	@media(max-width: 1280px - ($i * 100)) {
+		.tab_content{
+			h4{
+				font-size: 20px - $i !important;
+			} 
+		}
+	};
+}
+@media screen and (max-width: 1500px) {
+	
+}
+@media screen and (max-width: 1280px) {
+	.tab_content{
+		h1{
+			letter-spacing: normal !important;
+		}
+	}
+	
+}
+@media screen and (max-width: 1200px) {
+	
+}
+@media screen and (max-width: 1024px) {
+	
+}
+@media screen and (max-width: 991px) {
+	
+}
+@media screen and (max-width: 800px) {
+	
+}
+@media screen and (max-width: 767px) {
+	.news{
+		.black:before,
+		.white:before{
+			display: none;
+		}
+	}
+	.contact form .btn{
+		margin-left: 20% !important;
+	}
+}
